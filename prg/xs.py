@@ -11,9 +11,11 @@
 # \license Public domain
 #******************************************************************************
 
+__all__ = ['XS']
+
 import sys
 import numpy as np
-import gf2
+from . import gf2
 
 #******************************************************************************
 # Class XS
@@ -192,7 +194,7 @@ class XS:
 		# invertibility
 		if self.is_invertible() != True:
 			print ("    - invertible")
-			return 
+			return
 		print("    %d type" % self.get_type())
 		# transitivity
 		if self.is_transitive():

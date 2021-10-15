@@ -11,11 +11,13 @@
 # \license Public domain
 #******************************************************************************
 
+__all__ = ['GNAF2', 'GNA', 'GN']
+
 import sys
 import itertools
 import numpy as np
-from xs import XS
-import gf2
+from .xs import XS
+from . import gf2
 
 def GNAF2(circ, t):
 	a, B, c = circ.aBc()
